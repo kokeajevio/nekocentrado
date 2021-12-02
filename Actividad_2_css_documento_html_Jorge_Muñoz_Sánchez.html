@@ -1,0 +1,233 @@
+<!--Ejercicio 12: Utilizando grid y el código HTML que tenéis en AULES, crea una página
+dónde el resultado sea el siguiente:-->
+
+
+<!DOCTYPE html>
+
+<html lang="es">  
+<head>    
+    <title>Mi primera página web HTML</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Ejercicio 11">
+    <meta name="description" content="listas ordenadas">    
+    <meta name="author" content="Jorge Muñoz Sánchez">
+    <meta name="viewport" content="width=device-width, maximun-scale=1.0">
+   
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap'); 
+ 
+        .container{
+                      
+            display: grid;
+                       
+        
+          grid-template: 100px 1fr  30px / 1fr  350px 150px; 
+          grid-template-areas: "header       header      header"
+                                            "izquierda   centro     derecha"
+                                            "footer         footer       footer";
+                                                        
+                        grid-gap: 10px;
+                        height: 100vh;
+                        
+                     
+                   }
+                  
+                   body{
+                    font-family: 'Play', sans-serif; 
+                   }
+
+                   .item{
+                       padding: 10px;
+                       border-radius: 10px;
+                       
+                   }
+
+            
+        
+              
+                   .header{
+        
+                       grid-area: header;
+                       background:#31A2AC;
+                          
+                     
+                       
+                   }
+                   .header-logo{
+                    grid-area: header;
+                    text-shadow: 0.1em 0.1em #333;
+                    font-size: 30px;
+                    text-align: center;
+                
+        
+                    }
+        
+                    .header-list {
+                        grid-area: header;
+                        text-align: center;
+                        
+                    }   
+
+                    .index {
+                        text-align: center;
+                        margin-top: 0px;
+                    }
+
+                     .index li {
+                         list-style: none;
+                         display: inline;
+                         padding: 0 10px;
+
+                     }   
+        
+                   
+        
+                    .izquierda{
+                        grid-area: izquierda;
+                        background: #E4535E; 
+         
+        
+                    }
+                    .centro{
+        grid-area:centro;
+         
+                        background-color: #B9C4C9;
+        
+                    }
+                    .derecha{
+                        grid-area: derecha;
+                       
+                        background-color: #BAA896;
+                        padding-top: 30px;
+        
+                    }
+        
+                   .footer{ 
+                       grid-area: footer;
+          background: #31A2AC; 
+          text-align: center;
+          padding-bottom: 10px;
+          
+        }
+         .izquierda-título{
+                text-align: center;
+         }
+
+        .izquierda-cuerpo{
+            text-align: center;
+        }
+
+        .centro-título{
+                text-align: center;
+         }
+
+       </style>
+               
+
+</head>  
+  
+     
+   
+
+<body>
+
+        <section class="container">
+            
+            <div class=" item header">
+                <div class="item header-logo">By bike</div>
+                       <div class="item header-list" >
+                            <ul class="index">
+    
+                                   <li>Inicio</li>
+                                   <li>Bicicletas</li>
+                                   <li>Accesorios</li>
+               
+    
+                            </ul>
+                       </div>
+             
+         </div>
+         <div class=" item izquierda">
+            <div class="item izquierda-título">
+                <h1>Competiciones de la comunidad valenciana</h1>
+
+            </div>
+                <div class=" item izquierda cuerpo">
+                <h3><strong>Federación de ciclismo de la comunidad valenciana</strong></h3>
+
+                <p>
+                    La Federació Ciclisme Comunitat Valenciana como objetivo social es una asociación sin ánimo de lucro 
+                    con personalidad jurídica y capacidad de obrar, cuyo fin prioritario es la promoción, tutela, 
+                    organización y control de las modalidades y
+                     especialidades deportivas que tenga adscritas, dentro del territorio del la Comunidad Valenciana.</p>
+
+                <h3><strong>¿Cómo federarme?</strong></h3>
+
+                <p>Tramitar la licencia federativa es muy fácil…, simplemente cumplimenta la solicitud 
+                    y abona el importe anual (ver obligaciones financieras en vigor) en el nº de cuenta que te indicamos a continuación:<br>
+                    BANCO SANTANDER/ ES07 cccc 3191 YYYY 0170 bbbb<br>
+CAIXA POPULAR/ ESXX YYYY ZZZZ CC ffffffffff<br>
+Remite toda la documentación (solicitud, justificante de pago, etc.) a la FCCV y te remitimos
+ la licencia tramitada a tu domicilio. Puedes entregar la documentación personalmente en nuestras oficinas.<br>
+También puedes realizarlo a través de la plataforma WEB de la FCCV, registradote si es la primera vez que accedes.</p>
+         
+            </div> 
+          </div>
+            
+             <div class=" item centro">
+                    <div class="item centro-título">
+                        <h1>Año 2021</h1>
+                        
+                    </div>
+                    <div class="item centro-contenido">
+                        <h3>58 TROFEO JOAQUÍN BARCELO</h3>
+                        Información
+                        <ul>
+    
+                            <li>Sax(Alicante)</li>
+                            <li>Modalidad: Carretera</li>
+                            <li>Fecha: 27 de Noviembre</li>
+        
+
+                     </ul>
+                     <h3>CARRERA LA PURISIMA 2021</h3>
+                     Información
+                     <ul>
+    
+                        <li>Torrevieja(Alicante)</li>
+                        <li>Modalidad: Carretera</li>
+                        <li>Fecha: 12 de Diciembre</li>
+    
+
+                 </ul>
+                    </div>
+                </div>
+             <div class="item derecha">
+               <strong>te puede gustar...</strong>
+                 <ul>
+                     <li><a href="https://www.orbea.com/es-es/">Orbea</a></li>
+                   <li><a href="https://www.trekbikes.com/es/es_ES/">Trek</a></li>
+                </ul>
+            </div>
+         
+
+            <div class="item footer">
+                <i>Autor:</i>
+                <a href="mailto:kokeajevio55@zoho.eu?Subject=Interesado%20en%20el%20curso" >Jorge Muñoz Sánchez</a>
+            </div>
+        
+     </section>
+   
+          
+      
+      
+       
+         
+ 
+
+    
+
+   
+</body>  
+</html>   
